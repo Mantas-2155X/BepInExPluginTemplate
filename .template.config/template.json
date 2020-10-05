@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "2155X",
+    "name": "BepInEx Plugin",
+    "description": "A project for creating a BepInEx Plugin that targets .NET Framework",
+    "defaultName": "ClassLibrary1",
+    "classifications": ["Common", "Library"],
+    "identity": "JetBrains.Common.Library.CSharp",
+    "shortName": "jbbepplugin",
+    "tags": {
+        "type": "project",
+        "language": "C#",
+        "platform": ".NET"
+    },
+    "sourceName": "BepInExPluginTemplate",
+    "preferNameDirectory": "true",
+    "guids": [
+        "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF"
+    ],
+    "symbols": {
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "text",
+            "replaces": "v4.5",
+            "isRequired": "true",
+            "defaultValue": "<FullTargetFramework>"
+        },
+        "CompanyName": {
+            "type": "parameter",
+            "datatype": "text",
+            "replaces": "CompanyName",
+            "defaultValue": "" 
+        },
+        "CompanyTrademark": {
+            "type": "parameter",
+            "datatype": "text",
+            "replaces": "CompanyTrademark",
+            "defaultValue": "" 
+        },
+        "Year": {
+            "type": "generated",
+            "generator": "now",
+            "replaces": "Year",
+            "parameters": {
+                "format": "yyyy"
+            }
+        }
+    },
+    "primaryOutputs": [
+        { "path": "BepInExPluginTemplate.csproj" },
+        { "path": "BepInExPluginTemplate.cs" },
+        { "path": "Hooks.cs" }
+    ],
+    "postActions": [
+        {
+            "description": "Opens BepInExPluginTemplate.cs in the editor",
+            "manualInstructions": [],
+            "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+            "args": {
+                "files": "1"
+            },
+            "continueOnError": true
+        }
+    ]
+}
